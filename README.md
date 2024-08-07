@@ -1,6 +1,6 @@
-# To-Do List API
+# To-Do List
 
-Utilizando o backend
+Testar o sistema
 
 ## Configuração
 
@@ -10,7 +10,12 @@ Clone o repositório para sua máquina.
 
 ### 2. Instalar Dependências
 
+Entre no diretorio do backend: cd backend
 npm install
+
+Faça o mesmo para o frontend: cd frontend
+npm install
+
 
 ### 3. Configurar o Banco de Dados
 
@@ -29,15 +34,22 @@ CREATE TABLE todos (
 );
 
 ### 4. Configurar Variáveis de Ambiente
-Crie um arquivo .env na raiz do projeto e adicione suas configurações de banco de dados:
+Crie um arquivo .env na raiz do projeto backend e adicione suas configurações de banco de dados:
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=
 DB_NAME=todolist
 
 ### 5. Iniciar o Servidor
-Inicie o servidor de desenvolvimento:
+Inicie o servidor de desenvolvimento no backend:
 npm run dev
+
+Inicie o servidor de desenvolvimento no frontend:
+ng serve
+
+
+### É possivel utilizar a api no postman
+
 
 ### Endpoints da API
 1. Obter Todos os Itens
@@ -85,3 +97,8 @@ Método: DELETE
 URL: /todos/:id
 Descrição: Altera o status do item com o ID especificado para 'deleted' em vez de deletar fisicamente.
 
+
+
+### Informações adicionais sobre o projeto
+
+Foi criado um atributo do tipo status, para que ao deletar uma tarefa, a mesma não seja deletada diretamente no banco. Sendo possível efetuar uma recuperação.
