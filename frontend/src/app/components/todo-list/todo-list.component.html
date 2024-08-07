@@ -1,1 +1,26 @@
-<p>todo-list works!</p>
+<div class="todo-list-section">
+    <div class="todo-list-container">
+      <div class="todo-list-menu">
+        <h2>Lista de Tarefas</h2>
+        <a routerLink="/add" class="btn btn-success">Criar Tarefas</a>
+      </div>
+      <ul class="todo-list">
+        <li *ngFor="let todo of todos" class="todo-item">
+          <div class="todo-item-header">
+            <strong>{{ todo.title }}</strong>
+            <div class="todo-item-checked">
+              <span>Marcar como Concluido</span>
+              <input type="checkbox" [checked]="todo.completed" (change)="toggleComplete(todo)">
+            </div>
+          </div>
+          <p class="todo-description">{{ todo.description }}</p>
+          <p>Criado em: {{ todo.createdAt | date:'short' }}</p>
+          <p>Atualizado em: {{ todo.updatedAt | date:'short' }}</p>
+          <div class="todo-actions">
+            <a [routerLink]="['/update', todo.id]" class="btn btn-primary">Atualizar</a>
+            <button (click)="deleteTodo(todo.id)" class="btn btn-danger">Apagar</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
