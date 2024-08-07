@@ -25,7 +25,7 @@ Crie um Banco de Dados: No MySQL Workbench ou através do terminal MySQL, crie u
 
 Criar Tabela: Execute o seguinte comando SQL para criar a tabela todos:
 
-´CREATE TABLE todos (
+`CREATE TABLE todos (
   id INT AUTO_INCREMENT PRIMARY KEY,
   title VARCHAR(255) NOT NULL,
   description TEXT,
@@ -33,7 +33,7 @@ Criar Tabela: Execute o seguinte comando SQL para criar a tabela todos:
   status ENUM('active', 'inactive', 'deleted') NOT NULL DEFAULT 'active',
   createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);´
+);`
 
 
 ### 4. Configurar Variáveis de Ambiente
