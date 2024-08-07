@@ -1,0 +1,14 @@
+.app-footer {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .app-footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
