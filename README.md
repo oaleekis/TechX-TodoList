@@ -11,9 +11,11 @@ Clone o repositório para sua máquina.
 ### 2. Instalar Dependências
 
 Entre no diretorio do backend: cd backend
+
 npm install
 
 Faça o mesmo para o frontend: cd frontend
+
 npm install
 
 
