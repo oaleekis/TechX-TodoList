@@ -9,7 +9,6 @@
           <div class="todo-item-header">
             <strong>{{ todo.title }}</strong>
             <div class="todo-item-checked">
-              <span>Marcar como Concluido</span>
               <input type="checkbox" [checked]="todo.completed" (change)="toggleComplete(todo)">
             </div>
           </div>
